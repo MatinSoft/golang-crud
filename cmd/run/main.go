@@ -22,7 +22,7 @@ func main() {
 	port := cfg.App.Port
 
 	if port == "" {
-		port = "8081"
+		port = "8080"
 	}
 
 	app := bootstrap.New()
