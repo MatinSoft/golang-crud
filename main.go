@@ -7,11 +7,6 @@ import (
 	"github.com/maadco/go-crud-test/presentation"
 )
 
-// @title Go CRUD Clean Architecture CQRS API
-// @version 1.0
-// @description Customer CRUD service with Go, Gin, DDD, CQRS and Clean Architecture.
-// @host localhost:8080
-// @BasePath /
 func main() {
 	r := gin.Default()
 
