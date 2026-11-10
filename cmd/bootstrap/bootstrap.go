@@ -2,9 +2,9 @@ package bootstrap
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/maadco/go-crud-test/application"
-	"github.com/maadco/go-crud-test/infrastructure"
-	"github.com/maadco/go-crud-test/presentation"
+	"github.com/maadco/go-crud-test/internal/application"
+	"github.com/maadco/go-crud-test/internal/infrastructure"
+	"github.com/maadco/go-crud-test/internal/presentation"
 )
 
 // App holds the wired dependencies of the application.

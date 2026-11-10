@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	"github.com/maadco/go-crud-test/application"
-	"github.com/maadco/go-crud-test/infrastructure"
+	"github.com/maadco/go-crud-test/internal/application"
+	"github.com/maadco/go-crud-test/internal/infrastructure"
 	"github.com/stretchr/testify/assert"
 )
 

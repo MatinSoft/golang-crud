@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/maadco/go-crud-test/domain"
+	"github.com/maadco/go-crud-test/internal/domain"
 )
 
 type InMemoryCustomerRepository struct {

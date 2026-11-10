@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/maadco/go-crud-test/infrastructure"
+	"github.com/maadco/go-crud-test/internal/infrastructure"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -2,7 +2,7 @@ package ports
 
 import (
 	"context"
-	"github.com/maadco/go-crud-test/domain"
+	"github.com/maadco/go-crud-test/internal/domain"
 )
 
 type CustomerRepository interface {

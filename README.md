@@ -3,11 +3,12 @@
 ## Project Structure
 - `cmd/bootstrap/`: Dependency wiring for the infrastructure, application and presentation layers.
 - `cmd/run/`: Application entrypoint.
-- `domain/`: Domain models, Value Objects (`PhoneNumber` validated with Google libphonenumber, `Email`, `BankAccountNumber`), and Domain Events.
-- `application/`: CQRS command & query handlers, CustomerService business logic.
-- `ports/`: Interfaces for Repositories and Event Store.
-- `infrastructure/`: In-Memory / GORM Repositories and Event Store implementation.
-- `presentation/`: Gin REST API handlers, routes, and Swagger UI integration.
+- `internal/`: Application code that cannot be imported by other modules.
+  - `domain/`: Domain models, Value Objects (`PhoneNumber` validated with Google libphonenumber, `Email`, `BankAccountNumber`), and Domain Events.
+  - `application/`: CQRS command & query handlers, CustomerService business logic.
+  - `ports/`: Interfaces for Repositories and Event Store.
+  - `infrastructure/`: In-Memory / GORM Repositories and Event Store implementation.
+  - `presentation/`: Gin REST API handlers, routes, and Swagger UI integration.
 
 ## API Endpoints
 - `POST /api/v1/customers` - Create customer with validations

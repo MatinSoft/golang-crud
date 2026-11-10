@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/maadco/go-crud-test/domain"
-	"github.com/maadco/go-crud-test/ports"
+	"github.com/maadco/go-crud-test/internal/domain"
+	"github.com/maadco/go-crud-test/internal/ports"
 )
 
 type CreateCustomerCommand struct {
