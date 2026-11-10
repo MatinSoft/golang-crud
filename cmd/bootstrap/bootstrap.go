@@ -1,19 +1,20 @@
-package main
+package bootstrap
 
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/maadco/go-crud-test/application"
-	_ "github.com/maadco/go-crud-test/docs"
 	"github.com/maadco/go-crud-test/infrastructure"
 	"github.com/maadco/go-crud-test/presentation"
 )
 
-// @title Customer CRUD API
-// @version 1.0
-// @description Customer CRUD API built with Gin, DDD, Clean Architecture and CQRS.
-// @host localhost:8080
-// @BasePath /
-func main() {
+// App holds the wired dependencies of the application.
+type App struct {
+	Router          *gin.Engine
+	CustomerService *application.CustomerService
+}
+
+// New wires the infrastructure, application and presentation layers together.
+func New() *App {
 	r := gin.Default()
 
 	repo := infrastructure.NewInMemoryCustomerRepository()
@@ -22,5 +23,8 @@ func main() {
 
 	presentation.RegisterRoutes(r, service)
 
-	r.Run(":8080")
+	return &App{
+		Router:          r,
+		CustomerService: service,
+	}
 }

@@ -1,6 +1,8 @@
 # Customer CRUD Application with Go, Gin, DDD, Clean Architecture & CQRS
 
 ## Project Structure
+- `cmd/bootstrap/`: Dependency wiring for the infrastructure, application and presentation layers.
+- `cmd/run/`: Application entrypoint.
 - `domain/`: Domain models, Value Objects (`PhoneNumber` validated with Google libphonenumber, `Email`, `BankAccountNumber`), and Domain Events.
 - `application/`: CQRS command & query handlers, CustomerService business logic.
 - `ports/`: Interfaces for Repositories and Event Store.
